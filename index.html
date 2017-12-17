@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='css/bootstrap.min.css'/>
+    <title>Questions</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- This is the "Start" button-->
+      <div class="form-group">
+        <button type="button" name="ok" id="start-btn" class="btn btn-primary">Стартувати</button>
+      </div>
+
+      <!--The player's score-->
+      <div class="well">Твій рахунок: <span id="score">0</span></div>
+
+      <div id="message"></div>
+
+      <!--The quiz will be displayed here-->
+      <div id="question-block"></div>
+
+    </div>
+
+
+    <!--The "Question" template-->
+    <script id="question-template" type="text/x-handlebars-template">
+      <p><b>Питання {{counter}}</b>:</p>
+      <p>{{question.text}}</p>
+      <div id="buttons">
+        <button value="yes" class="btn btn-success">Так</button>
+        <button value="no" class="btn btn-danger">Ні</button>
+      </div>
+    </script>
+
+    <!--The JS code-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>
